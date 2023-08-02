@@ -1,0 +1,240 @@
+body {
+  overflow: hidden;
+  cursor: pointer;
+  animation: fade-in 0.8s ease-in;
+}
+
+p {
+  font-family: 'Kawingan';
+  font-size: 10pt;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4vh;
+  background: white;
+}
+
+.nav h1 {
+  margin-top: 20px;
+  font-family: 'Cinema';
+  margin-left: 1vw;
+}
+
+.nav ul {
+  font-family: 'Kawingan';
+  line-height: 10pt;
+  list-style: none;
+  margin-left: 1vw;
+  padding: 0;
+  font-weight: lighter;
+}
+
+.nav li {
+  padding: 5px;
+}
+
+#project-page h1 {
+  font-family: 'Kawingan';
+  font-size: 12pt;
+  font-weight: lighter;
+  color: black;
+  text-transform:uppercase;
+  position: sticky;
+  top: 0.75vh;
+  padding-top: 1vh;
+  background: white;
+}
+
+#project-page p {
+  margin-right: 12vw;
+}
+
+#project-page {
+  margin-left: 20vw;
+  overflow-y: scroll;
+  height: 100vh;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+#project-page::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+#project-page img {
+  margin-bottom: 4vh;
+}
+
+#project-page a, #project-page small {
+  font-family: 'Kawingan';
+  font-weight: lighter;
+}
+
+a:hover{
+  font-weight: bolder;
+  transition: ease-in-out;
+}
+
+#project-page ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style-type: none;
+  grid-gap: 2vw;
+  margin-right: 15vw;
+}
+
+#project-page p {
+  margin: 0;
+  text-align: justify;
+}
+
+#project-page img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+audio {
+  position: fixed;
+  top: 92.5vh;
+  margin-left: 0.5vw;
+}
+
+.audio-player {
+  width: 100%;
+  font-family: 'Cinema';
+}
+
+#back-button {
+  position: absolute;
+  left: 90%;
+  bottom: 0px;
+  transform: translateX(-10%);
+  font-family: 'Kawingan';
+  font-size: 12pt;
+  font-weight: lighter;
+  background: none; border: none;
+  cursor: pointer;
+}
+
+.container, .project-page {
+  z-index: 1;
+  position: relative;
+  width: 80vw;
+  margin-left: 17.5vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gallery-image {
+  position: absolute;
+  max-width: 40%; /* Adjust the maximum width as needed */
+  max-height: 40%; /* Adjust the maximum height as needed */
+  cursor: pointer;
+  /* Add any other styles you want for the images */
+}
+
+#about-txt {
+  display: none;
+  line-height: 15pt;
+  text-align: justify;
+  font-size: 10pt;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* AUDIO STYLING */
+
+audio::-webkit-media-controls-rewind-button
+ {
+  background-color: red;
+}
+
+audio::-webkit-media-controls-mute-button { 
+  background-color: white;
+  margin-right: 300px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: white;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-image: url('img/JS_Test_IMG1.png');
+}
+
+audio::-webkit-media-controls-current-time-display {
+  font-family: 'Kawingan';
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  font-family: 'Kawingan';
+}
+
+audio::-webkit-media-controls-timeline {
+  background-color: transparent;
+  border-radius: 0px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/**/
+
+li::selection {
+  background: white;
+}
+
+@font-face {
+  font-family: 'Kawingan';
+  src: url('fonts/Kawingan-Bold.woff2') format('woff2'),
+      url('fonts/Kawingan-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kawingan';
+  src: url('fonts/Kawingan-Light.woff2') format('woff2'),
+      url('fonts/Kawingan-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cinema';
+  src: url('fonts/CinemaRegular.woff2') format('woff2'),
+      url('fonts/CinemaRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kawingan';
+  src: url('fonts/KawinganRegular.woff2') format('woff2'),
+      url('fonts/KawinganRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
